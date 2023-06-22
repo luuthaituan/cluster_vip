@@ -3,10 +3,11 @@ variable "vpc_name" {
 }
 
 variable "cidr_block" {
-  type = string
+  type    = list(string)
+  default = ["10.1.0.0/16", "10.0.0.0/16"]
 }
 
 variable "availability_zones" {
-  type = list(string)
+  type    = list(string)
   default = ["ap-southeast-1a", "ap-southeast-1b"]
 }
